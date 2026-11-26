@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Prabhu Chandhar</title>
+<meta name="description" content="Dr. Prabhu Chandhar — Director, BaSig Wireless Laboratories. Research in 5G/6G, massive MIMO, drone communications and deep learning for wireless.">
+<style>
+/* VOICE: plain and simple
+   IDEA: a clean one-page CV
+   PICTURE: the portrait beside the name
+   COLOUR and TYPE: white / near-black night, black text, one blue for links; system sans-serif
+   LAYOUT: one column, simple headings and lists */
+:root{color-scheme:light dark;
+  --bg:light-dark(#ffffff,#121212);--ink:light-dark(#1a1a1a,#ececec);--muted:light-dark(#666,#a0a0a0);
+  --line:light-dark(#e6e6e6,#2c2c2c);--link:light-dark(#1a56db,#7aa7ff)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:clip}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.page{max-width:760px;margin:0 auto;padding:48px 20px 64px}
+.muted{color:var(--muted)}.small{font-size:14px}
+h1,h2,h3,h4{margin:0;line-height:1.25}
+
+header{display:flex;gap:24px;align-items:center;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.photo{flex:none;width:120px;height:120px;border-radius:50%;overflow:hidden;background:var(--line)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;display:block}
+.photo .mono{display:none;width:100%;height:100%;place-items:center;font-size:36px;font-weight:600;color:var(--muted)}
+.photo.noimg img{display:none}.photo.noimg .mono{display:grid}
+h1{font-size:32px;font-weight:700}
+.role{margin:4px 0 8px;color:var(--muted)}
+.contact{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:15px}
+.contact a{overflow-wrap:anywhere}
+
+nav{display:flex;flex-wrap:wrap;gap:4px 18px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+nav a{color:var(--muted)}nav a:hover{color:var(--ink)}
+
+section{padding-top:36px}
+h2{font-size:22px;font-weight:700;margin-bottom:14px}
+.sub{font-size:16px;font-weight:600;margin:22px 0 6px;color:var(--muted)}
+
+ul{list-style:none;margin:0;padding:0}
+.timeline li,.pub,.event{padding:10px 0;border-bottom:1px solid var(--line)}
+.timeline li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:16px}
+.tl-date,.event-date{color:var(--muted);font-size:14px;white-space:nowrap}
+.tl-body h3{font-size:16px;font-weight:600}
+.tl-org a{color:inherit}
+.tl-loc,.tl-note{font-size:14px;color:var(--muted)}
+
+.grid .card{display:block;padding:8px 0;color:inherit}
+.product .icon,.product .more{display:none}
+.product h3{display:inline;font-size:16px;font-weight:600}
+a.product h3{color:var(--link)}
+.product-tag{display:inline;color:var(--muted)}.product-tag::before{content:" — "}
+.product p{margin:2px 0 0;font-size:15px;color:var(--muted)}
+
+.books .book{display:block;padding:6px 0;color:inherit}
+.book-spine{display:none}
+.book-info h3{display:inline;font-size:16px;font-weight:600;color:var(--link)}
+.book-info>div{display:inline;font-size:15px;color:var(--muted)}
+.book-info>div::before{content:" · "}
+
+.pub{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px}
+.pub-year{color:var(--muted);font-size:14px}
+.pub-title{font-weight:600}
+.pub-authors,.pub-venue{font-size:14.5px;color:var(--muted)}
+.pub-authors strong{color:var(--ink);font-weight:600}
+.chip{margin-left:8px;font-size:13.5px}
+.chip::before{content:"["}.chip::after{content:"]"}
+
+.year-group summary{cursor:pointer;padding:10px 0;font-weight:600;border-bottom:1px solid var(--line)}
+.yg-count{font-weight:400;color:var(--muted);margin-left:8px;font-size:14px}
+.event{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px}
+.event-title{font-weight:600;font-size:15.5px}
+.event-meta{font-size:14px;color:var(--muted)}
+
+.plain li{padding:4px 0}
+.plain b{font-weight:600}
+
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 16px}
+
+@media (max-width:600px){
+  header{flex-direction:column;align-items:flex-start;gap:16px}
+  .photo{width:96px;height:96px}
+  h1{font-size:28px}
+  .timeline li,.event{grid-template-columns:1fr;gap:0}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="photo"><img src="photo.jpg" alt="Dr. Prabhu Chandhar" onerror="this.parentNode.classList.add('noimg')"><div class="mono">PC</div></div>
+  <div>
+    <h1>Dr. Prabhu Chandhar</h1>
+    <p class="role">Director, BaSig Wireless Laboratories India Pvt. Ltd., Mayiladuthurai, Tamil Nadu</p>
+    <div class="contact">
+      <a href="mailto:prabhu@basigwireless.com">prabhu@basigwireless.com</a>
+      <a href="https://scholar.google.co.in/citations?user=NL_MEEsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://basigwireless.com/" target="_blank" rel="noopener">BaSig Wireless</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#experience">Experience</a><a href="#products">Products</a><a href="#publications">Publications</a><a href="#talks">Talks</a><a href="#workshops">Workshops</a><a href="#service">Professional activities</a><a href="#teaching">Teaching</a>
+</nav>
+
+<section id="experience">
+  <h2>Research Experience</h2>
+  <ul class="timeline"><li><div class="tl-date">Apr 2026 – Present</div><div class="tl-body">
+<h3>Director</h3><div class="tl-org"><a href="https://www.basigwireless.com/" target="_blank" rel="noopener">BaSig Wireless Laboratories India Pvt. Ltd.</a></div><div class="tl-loc">Mayiladuthurai, Tamil Nadu, India</div>
+</div></li>
+<li><div class="tl-date">Jan 2018 – Present</div><div class="tl-body">
+<h3>Director</h3><div class="tl-org">Chandhar Research Labs Pvt. Ltd.</div><div class="tl-loc">Mayiladuthurai, Tamil Nadu, India</div>
+</div></li>
+<li><div class="tl-date">Nov 2015 – Oct 2017</div><div class="tl-body">
+<h3>Postdoctoral Researcher</h3><div class="tl-org"><a href="https://liu.se/en/organisation/liu/isy/ks" target="_blank" rel="noopener">Division of Communication Systems, Linköping University</a></div><div class="tl-loc">Sweden</div>
+<div class="tl-note">Supervisor: Prof. Erik G. Larsson</div></div></li>
+<li><div class="tl-date">Aug 2010 – May 2015</div><div class="tl-body">
+<h3>PhD, Wireless Communications</h3><div class="tl-org"><a href="http://www.iitkgp.ac.in/department/GS" target="_blank" rel="noopener">G. S. Sanyal School of Telecommunications, IIT Kharagpur</a></div><div class="tl-loc">India</div>
+<div class="tl-note">Supervisor: Dr. Suvra Sekhar Das</div></div></li>
+<li><div class="tl-date">Aug 2009 – Jul 2010</div><div class="tl-body">
+<h3>Senior Research Fellow</h3><div class="tl-org">Vodafone IIT Center for Telecommunications (VICET), IIT Kharagpur</div><div class="tl-loc">India</div>
+</div></li></ul>
+</section>
+
+<section id="products">
+  <h2>Products Developed</h2>
+  <div class="grid"><a href="https://basigwireless.com/products/5-nines-radio/" target="_blank" rel="noopener" class="card product">
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v6H4zM4 14h16v6H4zM8 7h.01M8 17h.01"/></svg>
+<h3>Five9 Radio</h3><div class="product-tag">5G Testbed</div><p>An end-to-end 4G/5G cellular testbed for research, teaching and live demonstrations.</p><span class="more">Visit site →</span></a>
+<a href="https://basigwireless.com/products/deep-radio/" target="_blank" rel="noopener" class="card product">
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v1a4 4 0 0 0-2 7 4 4 0 0 0 6 4 4 4 0 0 0 6-4 4 4 0 0 0-2-7V7a4 4 0 0 0-4-4zM12 3v18"/></svg>
+<h3>Deep Radio</h3><div class="product-tag">Deep Learning Testbed for Wireless</div><p>Hands-on platform for applying deep learning to RF signals, waveforms and channel coding.</p><span class="more">Visit site →</span></a>
+<a href="https://basigwireless.com/press/yesdr/" target="_blank" rel="noopener" class="card product">
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a7 7 0 0 1 14 0M8.5 12a3.5 3.5 0 0 1 7 0M12 12v9"/></svg>
+<h3>YESDR</h3><div class="product-tag">AI-Powered Private Cellular Standard</div><p>Your Extensible Software Defined Radio — an open, AI-driven private cellular standard.</p><span class="more">Visit site →</span></a>
+<a href="https://basigwireless.com/products/wi-guy/" target="_blank" rel="noopener" class="card product">
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 19.5h.01"/></svg>
+<h3>Wi-Guy</h3><div class="product-tag">SDR Platform for Wireless Fundamentals</div><p>WIreless GUide for You — an SDR-based kit for learning wireless communication principles.</p><span class="more">Visit site →</span></a>
+<a href="https://basigwireless.com/products/loiter/" target="_blank" rel="noopener" class="card product">
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10v4M10 12h4M5 5l5 5M19 5l-5 5M5 19l5-5M19 19l-5-5M3 5h4M17 5h4M3 19h4M17 19h4"/></svg>
+<h3>Loiter</h3><div class="product-tag">5G-Enabled Drone</div><p>A drone platform with 5G connectivity for UAV communication research and use cases.</p><span class="more">Visit site →</span></a></div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <p class="muted small" style="margin:-6px 0 0">Full list on <a href="https://scholar.google.co.in/citations?user=NL_MEEsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></p>
+  <div class="sub">Books</div>
+  <div class="books"><a class="book" href="https://basigwireless.com/press/deep-radio-hands-on/" target="_blank" rel="noopener">
+<div class="book-spine"><span>Deep Radio</span></div>
+<div class="book-info"><h3>Deep Radio: Hands-On Wireless AI</h3><div>Prabhu Chandhar</div><div class="muted">Chandhar Research Press, 2026</div><div class="muted small">ISBN 978-81-982943-0-2</div></div></a>
+<a class="book" href="https://yesdr-standard.org/" target="_blank" rel="noopener">
+<div class="book-spine"><span>YESDR</span></div>
+<div class="book-info"><h3>YESDR: Your Extensible Software Defined Radio</h3><div>Prabhu Chandhar</div><div class="muted">Chandhar Research Press, 2026</div><div class="muted small">ISBN 978-81-982943-6-4</div></div></a>
+<a class="book" href="https://www.chandhar-labs.com/press/5g-nr-hands-on/" target="_blank" rel="noopener">
+<div class="book-spine"><span>5G NR Hands-On</span></div>
+<div class="book-info"><h3>5G NR Hands-On</h3><div>Arvind Kilaru A and Prabhu Chandhar</div><div class="muted">Chandhar Research Press, 2025</div><div class="muted small">ISBN 978-81-982943-5-7</div></div></a>
+<a class="book" href="https://doi.org/10.71061/lte_hands_on" target="_blank" rel="noopener">
+<div class="book-spine"><span>LTE Hands-On</span></div>
+<div class="book-info"><h3>LTE Hands-On</h3><div>Arvind Kilaru A and Prabhu Chandhar</div><div class="muted">Chandhar Research Press, 2024</div><div class="muted small">ISBN 978-81-982943-9-5 · doi:10.71061/lte_hands_on</div></div></a></div>
+  <div class="sub">Journal Publications</div>
+  <ul class="pubs"><li class="pub" data-kind="journal" data-text="elakkiya, t.; gauni, s.; chandhar, p. spectrum occupancy prediction using lstm models for cognitive radio applications network: computation in neural systems, pp. 1–32, sep. 2024">
+  <span class="pub-year">2024</span>
+  <div><div class="pub-title"><a href="https://www.tandfonline.com/doi/abs/10.1080/0954898X.2024.2393245" target="_blank" rel="noopener">Spectrum occupancy prediction using LSTM models for cognitive radio applications</a></div>
+  <div class="pub-authors">Elakkiya, T.; Gauni, S.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue">Network: Computation in Neural Systems, pp. 1–32, Sep. 2024</div></div></li>
+<li class="pub" data-kind="journal" data-text="elakkiya, t.; gauni, s.; chandhar, p. transfer learning based location-aided modulation classification in indoor environments for cognitive radio applications radioengineering, vol. 32, no. 4, pp. 531–541, oct. 2023">
+  <span class="pub-year">2023</span>
+  <div><div class="pub-title"><a href="https://www.radioeng.cz/fulltexts/2023/23_04_0531_0541.pdf" target="_blank" rel="noopener">Transfer Learning Based Location-Aided Modulation Classification in Indoor Environments for Cognitive Radio Applications</a></div>
+  <div class="pub-authors">Elakkiya, T.; Gauni, S.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue">Radioengineering, vol. 32, no. 4, pp. 531–541, Oct. 2023</div></div></li>
+<li class="pub" data-kind="journal" data-text="elakkiya, t.; gauni, s.; chandhar, p. modulation classification analysis of cnn model for wireless communication systems aims electronics and electrical engineering, vol. 7, no. 4, pp. 337–353, oct. 2023">
+  <span class="pub-year">2023</span>
+  <div><div class="pub-title"><a href="https://www.aimspress.com/article/doi/10.3934/electreng.2023018" target="_blank" rel="noopener">Modulation classification analysis of CNN model for wireless communication systems</a></div>
+  <div class="pub-authors">Elakkiya, T.; Gauni, S.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue">AIMS Electronics and Electrical Engineering, vol. 7, no. 4, pp. 337–353, Oct. 2023</div></div></li>
+<li class="pub" data-kind="journal" data-text="hariprasad, s.; deepa, t.; chandhar, p. senmqtt-set: an intelligent intrusion detection in iot-mqtt networks using ensemble multi cascade features ieee access, vol. 10, pp. 33095–33110, mar. 2022">
+  <span class="pub-year">2022</span>
+  <div><div class="pub-title"><a href="https://ieeexplore.ieee.org/document/9739734" target="_blank" rel="noopener">SENMQTT-SET: An Intelligent Intrusion Detection in IoT-MQTT Networks Using Ensemble Multi Cascade Features</a></div>
+  <div class="pub-authors">Hariprasad, S.; Deepa, T.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue">IEEE Access, vol. 10, pp. 33095–33110, Mar. 2022</div></div></li>
+<li class="pub" data-kind="journal" data-text="chandhar, p.; larsson, e. g. massive mimo for drone communications: applications, case studies and future directions ieee access, vol. 7, pp. 94676–94691, 2019">
+  <span class="pub-year">2019</span>
+  <div><div class="pub-title"><a href="https://ieeexplore.ieee.org/document/8761851" target="_blank" rel="noopener">Massive MIMO for Drone Communications: Applications, Case Studies and Future Directions</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Larsson, E. G.</div>
+  <div class="pub-venue">IEEE Access, vol. 7, pp. 94676–94691, 2019</div></div></li>
+<li class="pub" data-kind="journal" data-text="chandhar, p.; danev, d.; larsson, e. g. massive mimo for communications with drone swarms ieee transactions on wireless communications, vol. 17, no. 3, pp. 1604–1629, mar. 2018">
+  <span class="pub-year">2018</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/abstract/document/8214963/" target="_blank" rel="noopener">Massive MIMO for Communications with Drone Swarms</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Danev, D.; Larsson, E. G.</div>
+  <div class="pub-venue">IEEE Transactions on Wireless Communications, vol. 17, no. 3, pp. 1604–1629, Mar. 2018</div></div></li>
+<li class="pub" data-kind="journal" data-text="chandhar, p.; das, s. s. multi-objective framework for dynamic optimization of ofdma cellular systems ieee access, vol. 4, pp. 1889–1914, may 2016">
+  <span class="pub-year">2016</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7448822" target="_blank" rel="noopener">Multi-Objective Framework for Dynamic Optimization of OFDMA Cellular Systems</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Das, S. S.</div>
+  <div class="pub-venue">IEEE Access, vol. 4, pp. 1889–1914, May 2016<a class="chip" href="https://sites.google.com/site/prabhuchandhar/Energy_Saving_MOO_v2.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="journal" data-text="chandhar, p.; das, s. s. area spectral efficiency of co-channel deployed ofdma femtocell networks ieee transactions on wireless communications, vol. 13, no. 7, pp. 3524–3538, jul. 2014">
+  <span class="pub-year">2014</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6810163&amp;isnumber=6850111" target="_blank" rel="noopener">Area Spectral Efficiency of Co-Channel Deployed OFDMA Femtocell Networks</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Das, S. S.</div>
+  <div class="pub-venue">IEEE Transactions on Wireless Communications, vol. 13, no. 7, pp. 3524–3538, Jul. 2014</div></div></li></ul>
+  <div class="sub">Conference Publications</div>
+  <ul class="pubs"><li class="pub" data-kind="conference" data-text="rishit, b. s.; boddu, s.; chandhar, p. phase-interferometry based direction-of-arrival estimation using coherent software defined radios icetci 2026">
+  <span class="pub-year">2026</span>
+  <div><div class="pub-title"><a href="https://scholar.google.co.in/citations?view_op=view_citation&amp;hl=en&amp;user=NL_MEEsAAAAJ&amp;sortby=pubdate&amp;citation_for_view=NL_MEEsAAAAJ:WA5NYHcadZ8C" target="_blank" rel="noopener">Phase-Interferometry Based Direction-of-Arrival Estimation Using Coherent Software Defined Radios</a></div>
+  <div class="pub-authors">Rishit, B. S.; Boddu, S.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue">ICETCI 2026</div></div></li>
+<li class="pub" data-kind="conference" data-text="shivani, n.; anumas, s.; ongolu, p.; boddu, s.; chandhar, p. experimental evaluation of real-time video object detection over a 5g mec testbed ">
+  <span class="pub-year"></span>
+  <div><div class="pub-title"><a href="https://scholar.google.co.in/citations?view_op=view_citation&amp;hl=en&amp;user=NL_MEEsAAAAJ&amp;sortby=pubdate&amp;citation_for_view=NL_MEEsAAAAJ:HE397vMXCloC" target="_blank" rel="noopener">Experimental Evaluation of Real-Time Video Object Detection Over a 5G MEC Testbed</a></div>
+  <div class="pub-authors">Shivani, N.; Anumas, S.; Ongolu, P.; Boddu, S.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue"></div></div></li>
+<li class="pub" data-kind="conference" data-text="chennamsetty, s.; boddu, s.; chandhar, p.; bulusu, s. s. k. c. analysis of papr in otfs modulation with classical selected mapping technique comsnets 2023, 3–8 jan. 2023">
+  <span class="pub-year">2023</span>
+  <div><div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10041313/" target="_blank" rel="noopener">Analysis of PAPR in OTFS Modulation with Classical Selected Mapping Technique</a></div>
+  <div class="pub-authors">Chennamsetty, S.; Boddu, S.; <strong>Chandhar, P.</strong>; Bulusu, S. S. K. C.</div>
+  <div class="pub-venue">COMSNETS 2023, 3–8 Jan. 2023</div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; elakkiya, t.; babu, s.; krishnakumar, v.; sivakumar, a.; vignesh, g.; viswanathan, w. 4g spectrum occupancy analysis in chennai-india icetci 2022, 25–27 aug. 2022">
+  <span class="pub-year">2022</span>
+  <div><div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9921373/" target="_blank" rel="noopener">4G Spectrum Occupancy Analysis in Chennai-India</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Elakkiya, T.; Babu, S.; Krishnakumar, V.; Sivakumar, A.; Vignesh, G.; Viswanathan, W.</div>
+  <div class="pub-venue">ICETCI 2022, 25–27 Aug. 2022</div></div></li>
+<li class="pub" data-kind="conference" data-text="elakkiya, t.; chandhar, p. experimental analysis of deep learning-based modulation classification in indoor environments ieee indicon 2022, 19–21 dec. 2022">
+  <span class="pub-year">2022</span>
+  <div><div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9691585/" target="_blank" rel="noopener">Experimental Analysis of Deep Learning-based Modulation Classification in Indoor Environments</a></div>
+  <div class="pub-authors">Elakkiya, T.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue">IEEE INDICON 2022, 19–21 Dec. 2022</div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; babu, s.; elakkiya, t. teaching and learning the principles of wireless communication through smartphone and crfo icetci 2021, 25–27 aug. 2021">
+  <span class="pub-year">2021</span>
+  <div><div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9574082" target="_blank" rel="noopener">Teaching and Learning the Principles of Wireless Communication Through Smartphone and CRFO</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Babu, S.; Elakkiya, T.</div>
+  <div class="pub-venue">ICETCI 2021, 25–27 Aug. 2021</div></div></li>
+<li class="pub" data-kind="conference" data-text="elakkiya, t.; chandhar, p.; gauni, s. comparison of deep architectures for indoor rf signal classification icetci 2021, 25–27 aug. 2021">
+  <span class="pub-year">2021</span>
+  <div><div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9574083" target="_blank" rel="noopener">Comparison of Deep Architectures for Indoor RF Signal Classification</a></div>
+  <div class="pub-authors">Elakkiya, T.; <strong>Chandhar, P.</strong>; Gauni, S.</div>
+  <div class="pub-venue">ICETCI 2021, 25–27 Aug. 2021</div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; pai, v. u. on collaborative radio frequency observatory in india ieee ants 2020, pp. 1–6, 14–17 dec. 2020">
+  <span class="pub-year">2020</span>
+  <div><div class="pub-title"><a href="https://ieeexplore.ieee.org/document/9342793" target="_blank" rel="noopener">On Collaborative Radio Frequency Observatory in India</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Pai, V. U.</div>
+  <div class="pub-venue">IEEE ANTS 2020, pp. 1–6, 14–17 Dec. 2020</div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; danev, d.; larsson, e. g. on the zero-forcing receiver performance for massive mimo drone communications ieee spawc 2018 (invited paper), pp. 1–5, 25–28 jun. 2018">
+  <span class="pub-year">2018</span>
+  <div><div class="pub-title"><a href="https://ieeexplore.ieee.org/document/8445989/" target="_blank" rel="noopener">On the Zero-Forcing Receiver Performance for Massive MIMO Drone Communications</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Danev, D.; Larsson, E. G.</div>
+  <div class="pub-venue">IEEE SPAWC 2018 (Invited paper), pp. 1–5, 25–28 Jun. 2018<a class="chip" href="https://sites.google.com/site/prabhuchandhar/SPAWC2018_Poster.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Poster</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; danev, d.; larsson, e. g. on the outage capacity in massive mimo with line-of-sight ieee spawc 2017, pp. 1–6, 3–6 jul. 2017">
+  <span class="pub-year">2017</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/document/8227730/" target="_blank" rel="noopener">On the Outage Capacity in Massive MIMO with Line-of-Sight</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Danev, D.; Larsson, E. G.</div>
+  <div class="pub-venue">IEEE SPAWC 2017, pp. 1–6, 3–6 Jul. 2017<a class="chip" href="https://sites.google.com/site/prabhuchandhar/Outage_Capacity_SPAWC_V2.pdf" target="_blank" rel="noopener">Poster</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; danev, d.; larsson, e. g. on ergodic rates and optimal array geometry in line-of-sight massive mimo ieee spawc 2016, pp. 1–6, 3–6 jul. 2016">
+  <span class="pub-year">2016</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7536728" target="_blank" rel="noopener">On Ergodic Rates and Optimal Array Geometry in Line-of-Sight Massive MIMO</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Danev, D.; Larsson, E. G.</div>
+  <div class="pub-venue">IEEE SPAWC 2016, pp. 1–6, 3–6 Jul. 2016<a class="chip" href="https://sites.google.com/site/prabhuchandhar/On%20Ergodic%20Rates%20and%20Optimal%20Array%20Geometry%20in%20Line-of-Sight%20Massive%20MIMO.pdf" target="_blank" rel="noopener">Poster</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; danev, d.; larsson, e. g. massive mimo as enabler for communications with drone swarms icuas 2016, pp. 347–354, 7–10 jun. 2016">
+  <span class="pub-year">2016</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7502655" target="_blank" rel="noopener">Massive MIMO as Enabler for Communications with Drone Swarms</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Danev, D.; Larsson, E. G.</div>
+  <div class="pub-venue">ICUAS 2016, pp. 347–354, 7–10 Jun. 2016<a class="chip" href="https://sites.google.com/site/prabhuchandhar/UAVmassiveMIMO_Slides_ICUAS2016.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; das, s. s. energy saving in ofdma cellular networks with multi-objective optimization ieee icc 2014, pp. 3951–3956, 10–14 jun. 2014">
+  <span class="pub-year">2014</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6883938" target="_blank" rel="noopener">Energy Saving in OFDMA Cellular Networks with Multi-Objective Optimization</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Das, S. S.</div>
+  <div class="pub-venue">IEEE ICC 2014, pp. 3951–3956, 10–14 Jun. 2014<a class="chip" href="https://sites.google.com/site/prabhuchandhar/Energy_Saving_ICC_2014.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; ghosh, p.; das, s. s. performance analysis of co-channel deployment of femtocells with power control in 4g networks ncc 2014, pp. 1–6, 28 feb.–2 mar. 2014">
+  <span class="pub-year">2014</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6811377&amp;isnumber=6811235" target="_blank" rel="noopener">Performance Analysis of Co-Channel Deployment of Femtocells with Power Control in 4G Networks</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Ghosh, P.; Das, S. S.</div>
+  <div class="pub-venue">NCC 2014, pp. 1–6, 28 Feb.–2 Mar. 2014<a class="chip" href="https://sites.google.com/site/prabhuchandhar/NCC_Macro_Femto_PC_2014.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; das, s. s. area energy efficiency analysis for ofdma femtocell networks iswcs 2014, pp. 771–775, 26–29 aug. 2014">
+  <span class="pub-year">2014</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6933457&amp;isnumber=6933305" target="_blank" rel="noopener">Area Energy Efficiency Analysis for OFDMA Femtocell Networks</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Das, S. S.</div>
+  <div class="pub-venue">ISWCS 2014, pp. 771–775, 26–29 Aug. 2014<a class="chip" href="https://sites.google.com/site/prabhuchandhar/ISWCS_2014_AEE_Macro_Femto.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; das, s. s. cell load coupling framework for load balancing and ici coordination in ofdma cellular networks ieee vtc spring 2014, pp. 1–5, 18–21 may 2014">
+  <span class="pub-year">2014</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7022853" target="_blank" rel="noopener">Cell Load Coupling Framework for Load Balancing and ICI Coordination in OFDMA Cellular Networks</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Das, S. S.</div>
+  <div class="pub-venue">IEEE VTC Spring 2014, pp. 1–5, 18–21 May 2014<a class="chip" href="https://sites.google.com/site/prabhuchandhar/Load_Coupling_VTC_Spring_2014.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; das, s. s. adaptive downlink power control for co-channel femtocells in ofdma cellular networks ieee vtc spring 2014, pp. 1–5, 18–21 may 2014">
+  <span class="pub-year">2014</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=7022807" target="_blank" rel="noopener">Adaptive Downlink Power Control for Co-Channel Femtocells in OFDMA Cellular Networks</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Das, S. S.</div>
+  <div class="pub-venue">IEEE VTC Spring 2014, pp. 1–5, 18–21 May 2014<a class="chip" href="https://sites.google.com/site/prabhuchandhar/Power_Control_VTC_Spring_2014.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="boddu, s. r.; mukhopadhyay, a.; chandhar, p.; philip, b. v.; das, s. s. analysis of fractional frequency reuse in ofdma networks for real time and best effort traffic ieee icc 2013, pp. 5366–5370, 9–13 jun. 2013">
+  <span class="pub-year">2013</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6655441&amp;isnumber=6654691" target="_blank" rel="noopener">Analysis of Fractional Frequency Reuse in OFDMA Networks for Real Time and Best Effort Traffic</a></div>
+  <div class="pub-authors">Boddu, S. R.; Mukhopadhyay, A.; <strong>Chandhar, P.</strong>; Philip, B. V.; Das, S. S.</div>
+  <div class="pub-venue">IEEE ICC 2013, pp. 5366–5370, 9–13 Jun. 2013</div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; das, s. s. analysis of area spectral efficiency for co-channel deployed macrocell-femtocell ofdma networks ieee icc 2013, pp. 5010–5014, 9–13 jun. 2013">
+  <span class="pub-year">2013</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6655374&amp;isnumber=6654691" target="_blank" rel="noopener">Analysis of Area Spectral Efficiency for Co-Channel Deployed Macrocell-Femtocell OFDMA Networks</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Das, S. S.</div>
+  <div class="pub-venue">IEEE ICC 2013, pp. 5010–5014, 9–13 Jun. 2013<a class="chip" href="https://sites.google.com/site/prabhuchandhar/ASE_Macro_Femto_ICC_2013.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; das, s. s. analytical evaluation of offloading gain in macrocell-femtocell ofdma networks ieee vtc spring 2013, pp. 1–6, 2–5 jun. 2013">
+  <span class="pub-year">2013</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6692459&amp;isnumber=6691801" target="_blank" rel="noopener">Analytical Evaluation of Offloading Gain in Macrocell-Femtocell OFDMA Networks</a></div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Das, S. S.</div>
+  <div class="pub-venue">IEEE VTC Spring 2013, pp. 1–6, 2–5 Jun. 2013<a class="chip" href="https://sites.google.com/site/prabhuchandhar/Offloading_Macro_Femto_VTC_Spring_2013.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="das, s. s.; agrawal, p.; chandhar, p. energy saving in ofdma networks through base station sleep mode using genetic algorithm ieee vtc spring 2013, pp. 1–5, 2–5 jun. 2013">
+  <span class="pub-year">2013</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6692544&amp;isnumber=6691801" target="_blank" rel="noopener">Energy Saving in OFDMA Networks through Base Station Sleep Mode Using Genetic Algorithm</a></div>
+  <div class="pub-authors">Das, S. S.; Agrawal, P.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue">IEEE VTC Spring 2013, pp. 1–5, 2–5 Jun. 2013<a class="chip" href="https://sites.google.com/site/prabhuchandhar/Energy_Saving_VTC_Spring_2013.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="das, s. s.; ghosh, p.; chandhar, p. estimation of effective radio resource usage for voip scheduling in ofdma cellular networks ieee vtc spring 2012, pp. 1–6, 6–9 may 2012">
+  <span class="pub-year">2012</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6240309&amp;isnumber=6239848" target="_blank" rel="noopener">Estimation of Effective Radio Resource Usage for VoIP Scheduling in OFDMA Cellular Networks</a></div>
+  <div class="pub-authors">Das, S. S.; Ghosh, P.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue">IEEE VTC Spring 2012, pp. 1–6, 6–9 May 2012<a class="chip" href="https://sites.google.com/site/prabhuchandhar/VTC_Spring_2012_Poster.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="ghosh, p.; das, s. s.; naravaram, s.; chandhar, p. energy saving in ofdma cellular systems using base-station sleep mode: 3gpp-lte a case study ncc 2012, pp. 1–5, 3–5 feb. 2012">
+  <span class="pub-year">2012</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6176779&amp;isnumber=6176732" target="_blank" rel="noopener">Energy Saving in OFDMA Cellular Systems using Base-Station Sleep Mode: 3GPP-LTE a Case Study</a></div>
+  <div class="pub-authors">Ghosh, P.; Das, S. S.; Naravaram, S.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue">NCC 2012, pp. 1–5, 3–5 Feb. 2012</div></div></li>
+<li class="pub" data-kind="conference" data-text="ghosh, p.; das, s. s.; chandhar, p. voip scheduling with reduced overhead and radio resource usage estimation — effect on best effort capacity ncc 2012, pp. 1–5, 3–5 feb. 2012">
+  <span class="pub-year">2012</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6176783&amp;isnumber=6176732" target="_blank" rel="noopener">VoIP Scheduling with Reduced Overhead and Radio Resource Usage Estimation — Effect on Best Effort Capacity</a></div>
+  <div class="pub-authors">Ghosh, P.; Das, S. S.; <strong>Chandhar, P.</strong></div>
+  <div class="pub-venue">NCC 2012, pp. 1–5, 3–5 Feb. 2012</div></div></li>
+<li class="pub" data-kind="conference" data-text="das, s. s.; chandhar, p.; mitra, s.; ghosh, p. issues in femtocell deployments in broadband ofdma networks: 3gpp-lte a case study ieee vtc fall 2011, pp. 1–5, 5–8 sep. 2011">
+  <span class="pub-year">2011</span>
+  <div><div class="pub-title"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6093191&amp;isnumber=6092796" target="_blank" rel="noopener">Issues in Femtocell Deployments in Broadband OFDMA Networks: 3GPP-LTE a Case Study</a></div>
+  <div class="pub-authors">Das, S. S.; <strong>Chandhar, P.</strong>; Mitra, S.; Ghosh, P.</div>
+  <div class="pub-venue">IEEE VTC Fall 2011, pp. 1–5, 5–8 Sep. 2011<a class="chip" href="https://sites.google.com/site/prabhuchandhar/PID1097470_Poster.pdf?attredirects=0&amp;d=1" target="_blank" rel="noopener">Slides</a></div></div></li>
+<li class="pub" data-kind="conference" data-text="chandhar, p.; pushpalatha, v.; meenakshi, m. phase noise compensation in ofdm system over fading channels ncscn 2009, pp. 1–3, 30–31 mar. 2009">
+  <span class="pub-year">2009</span>
+  <div><div class="pub-title">Phase Noise Compensation in OFDM System Over Fading Channels</div>
+  <div class="pub-authors"><strong>Chandhar, P.</strong>; Pushpalatha, V.; Meenakshi, M.</div>
+  <div class="pub-venue">NCSCN 2009, pp. 1–3, 30–31 Mar. 2009</div></div></li></ul>
+  <div class="sub">Supervision of Master Thesis</div>
+  <ul class="plain"><li>Nsengiyumva, Valens, “<a href="http://liu.diva-portal.org/smash/get/diva2:934227/FULLTEXT01.pdf" target="_blank" rel="noopener">Is the Cyclic Prefix Needed in Massive MIMO?</a>” Department of Electrical Engineering, Linköping University.</li></ul>
+  <div class="sub">Patents</div>
+  <ul class="plain"><li>Das, S.S.; Ghosh, P.; Chandhar, P.; Palit, B., “<a href="http://ipindiaonline.gov.in/patentsearch/GrantedSearch/viewdoc.aspx?id=ZgmN+kQUueMgPQ5d5I3f5w%3d%3d&amp;loc=wDBSZCsAt7zoiVrqcFJsRw%3d%3d" target="_blank" rel="noopener">A Method for Ensuring High VoIP Capacity in LTE</a>,” Indian Patent, Ref. No. 618/KOL/2013.</li></ul>
+  <div class="sub">Blog Posts</div>
+  <ul class="plain"><li><a href="https://ma-mimo.ellintech.se/2017/12/20/massive-mimo-drone-swarms-and-some-cool-stuff/" target="_blank" rel="noopener">Massive MIMO, Drone Swarms, and Some Cool Stuff</a></li></ul>
+</section>
+
+<section id="talks">
+  <h2>Talks</h2>
+  <details class="year-group" open>
+<summary><span class="yg-year">2026</span><span class="yg-count">1 talk</span></summary>
+<ul class="events"><li class="event"><div class="event-date">18 Feb 2026</div>
+  <div><div class="event-title">Experimental 5G: Testbeds and the Roadmap to 6G</div><div class="event-meta">ATAL FDP on Next Generation RF IC Design for 5G: Architectures, Challenges, and Industry Relevant Applications · <span>Acharya Institute of Technology, Bangalore</span></div></div></li></ul></details>
+<details class="year-group" open>
+<summary><span class="yg-year">2025</span><span class="yg-count">10 talks</span></summary>
+<ul class="events"><li class="event"><div class="event-date">12 Dec 2025</div>
+  <div><div class="event-title">Hands-On: To Study a Communication System using Deep Radio</div><div class="event-meta">Faculty Development Program on 6G Technologies · <span>EGS Pillay Engineering College, Nagapattinam</span></div></div></li>
+<li class="event"><div class="event-date">08 Dec 2025</div>
+  <div><div class="event-title">Experimental 5G: Testbeds and the Roadmap to 6G</div><div class="event-meta">FDP on Multicarrier Modulation Techniques for 6G Wireless Communications · <span>Aditya College of Engineering, Surampalem</span></div></div></li>
+<li class="event"><div class="event-date">05 Dec 2025</div>
+  <div><div class="event-title">5G/6G Enabled Smart Farming: Use Cases and Applications &amp; Drone Communication</div><div class="event-meta">ATAL FDP on Next Generation Communication for 6G and Beyond · <span>IIT Dhanbad</span></div></div></li>
+<li class="event"><div class="event-date">30 Nov 2025</div>
+  <div><div class="event-title">ML/DL based Modulation Classification: Hands-On</div><div class="event-meta">FDP on Application of Artificial Intelligence in 5G/6G Communication Systems (Electronics and ICT Academy) · <span>National Institute of Technology Patna</span></div></div></li>
+<li class="event"><div class="event-date">02 Nov 2025</div>
+  <div><div class="event-title">Advanced Design and Optimization Techniques for Next-Generation Antennas</div><div class="event-meta">Professional Development Programme · <span>Sri Sairam Engineering College, Chennai</span></div></div></li>
+<li class="event"><div class="event-date">23 Jun 2025</div>
+  <div><div class="event-title">Design and Performance Optimization of Next-Generation Antennas for 5G/6G Communication Systems</div><div class="event-meta">ATAL Faculty Development Program · <span>St. Anne’s College of Engineering and Technology (SANCET), Panruti</span></div></div></li>
+<li class="event"><div class="event-date">05 Mar 2025</div>
+  <div><div class="event-title">5G Powered Smart Farming: Use Cases and Applications</div><div class="event-meta">Industrial Lecture · <span>EGS Pillai College of Engineering, Nagapattinam</span></div></div></li>
+<li class="event"><div class="event-date">28 Feb 2025</div>
+  <div><div class="event-title">Drones in 5G &amp; Beyond: A 3GPP Standards Perspective</div><div class="event-meta">FDP on V2X and UAV Communications in 6G: Recent Trends and Enabling Technologies · <span>National Institute of Technology Patna</span></div></div></li>
+<li class="event"><div class="event-date">22 Jan 2025</div>
+  <div><div class="event-title">RIS in 5G &amp; Beyond</div><div class="event-meta">ATAL FDP on 6G Networks · <span>Sathyabama Institute of Science and Technology, Chennai</span></div></div></li>
+<li class="event"><div class="event-date">06 Jan 2025</div>
+  <div><div class="event-title">5G for Industry 4.0</div><div class="event-meta">Invited Talk · <span>Kongu Engineering College, Erode</span></div></div></li></ul></details>
+<details class="year-group">
+<summary><span class="yg-year">2024</span><span class="yg-count">5 talks</span></summary>
+<ul class="events"><li class="event"><div class="event-date">27 Dec 2024</div>
+  <div><div class="event-title">RIS for 6G</div><div class="event-meta">FDP on V2X and UAV Communications in 6G: Recent Trends and Enabling Technologies · <span>National Institute of Technology Tiruchirappalli</span></div></div></li>
+<li class="event"><div class="event-date">06 Dec 2024</div>
+  <div><div class="event-title">Drones in 5G &amp; Beyond: A 3GPP Standards Perspective</div><div class="event-meta">ATAL FDP on Navigating the Future: A Deep Dive into Autonomous Vehicles — Theory to Practice · <span>Dhanekula Institute of Engineering &amp; Technology, Vijayawada</span></div></div></li>
+<li class="event"><div class="event-date">29 Nov 2024</div>
+  <div><div class="event-title">Drones in 5G &amp; Beyond: A 3GPP Standards Perspective</div><div class="event-meta">ATAL FDP on 5G and Beyond Wireless Communications for Autonomous Vehicles and Intelligent Transportation Systems (VEHI-5GCOM) · <span>Pandit Deendayal Energy University, Gandhinagar</span></div></div></li>
+<li class="event"><div class="event-date">27 Jul 2024</div>
+  <div><div class="event-title">5G Technologies for Industry 4.0</div><div class="event-meta">Industrial Lecture · <span>EGS Pillai College of Engineering, Nagapattinam</span></div></div></li>
+<li class="event"><div class="event-date">15 Feb 2024</div>
+  <div><div class="event-title">Applications of AI and ML in Wireless Communication and Sensor Networks</div><div class="event-meta">ATAL FDP on Millimeter Wave Communication and Key Enabling Technologies — 5G/6G · <span>NSS College of Engineering, Palakkad</span></div></div></li></ul></details>
+<details class="year-group">
+<summary><span class="yg-year">2023</span><span class="yg-count">5 talks</span></summary>
+<ul class="events"><li class="event"><div class="event-date">12 Dec 2023</div>
+  <div><div class="event-title">Machine Learning and Deep Learning Approaches for 5G &amp; IoT, and Practical Session on 5G Use Cases</div><div class="event-meta">ATAL FDP on Applications of Internet of Things Networks in 5G and Beyond · <span>Rajalakshmi Engineering College, Chennai</span></div></div></li>
+<li class="event"><div class="event-date">25 Nov 2023</div>
+  <div><div class="event-title">5G Technologies for Industry 4.0</div><div class="event-meta">ATAL FDP on Design Thinking and Prototyping for Industry 4.0 · <span>Shri Vishnu Engineering College for Women, Bhimavaram</span></div></div></li>
+<li class="event"><div class="event-date">27 Oct 2023</div>
+  <div><div class="event-title">5G Enabled Drones: Use Cases and Applications</div><div class="event-meta">3-Day Online Drone Boot Camp · <span>Dhanekula Institute of Engineering and Technology, Vijayawada</span></div></div></li>
+<li class="event"><div class="event-date">08 Jul 2023</div>
+  <div><div class="event-title">Realizing Your Own Private 5G Network: A Hands-On</div><div class="event-meta">SERB KARYASHALA Workshop on Modelling of Energy Efficient Waveforms and Systems for B5G Communications · <span>National Institute of Technology Tiruchirappalli</span></div></div></li>
+<li class="event"><div class="event-date">23 Jun 2023</div>
+  <div><div class="event-title">Deep Learning based RF Signal Classification: Hands-On</div><div class="event-meta">2nd International Conference on ML, DL &amp; Computational Intelligence for Wireless Communication · <span>National Institute of Technology Tiruchirappalli</span></div></div></li></ul></details>
+<details class="year-group">
+<summary><span class="yg-year">2022</span><span class="yg-count">5 talks</span></summary>
+<ul class="events"><li class="event"><div class="event-date">21 Dec 2022</div>
+  <div><div class="event-title">Deep Learning-based RF Signal Classification in 5G and Beyond Communications: Hands-On</div><div class="event-meta">SERB KARYASHALA Workshop on Application of Machine Learning in B5G Wireless Communications · <span>National Institute of Technology Tiruchirappalli</span></div></div></li>
+<li class="event"><div class="event-date">18 Jul 2022</div>
+  <div><div class="event-title">5G Enabled Communication System Design for Autonomous Vehicles and Drones</div><div class="event-meta">SERB KARYASHALA Workshop on Vehicular Communications for Next-Generation Intelligent Transportation Systems · <span>IIT Indore</span></div></div></li>
+<li class="event"><div class="event-date">11 May 2022</div>
+  <div><div class="event-title">Machine Learning based Intrusion Detection in IoT-MQTT Networks</div><div class="event-meta">FDP on Applications of AI in Wireless Communication and Sensor Networks · <span>NIT Warangal</span></div></div></li>
+<li class="event"><div class="event-date">23 Mar 2022</div>
+  <div><div class="event-title">Statistical Modelling and Experimental Verification of 4G/5G Cellular Systems using a Real-Time Testbed</div><div class="event-meta">Short-Term Course on Statistical Modelling and Analysis of Advanced Wireless Communication Systems · <span>IIT Indore</span></div></div></li>
+<li class="event"><div class="event-date">11 Feb 2022</div>
+  <div><div class="event-title">Massive MIMO enabled Communication System Design for Drone Swarms</div><div class="event-meta">FDP on Applications of Deep Learning Techniques to 5G Wireless Communication Technologies · <span>Vel Tech Rangarajan Dr. Sagunthala R&amp;D Institute of Science and Technology, Chennai</span></div></div></li></ul></details>
+<details class="year-group">
+<summary><span class="yg-year">2021</span><span class="yg-count">12 talks</span></summary>
+<ul class="events"><li class="event"><div class="event-date">27 Aug 2021</div>
+  <div><div class="event-title">Hands-On Training on Deep Learning based RF Signal Classification for Cognitive Green Communications</div><div class="event-meta">AICTE Online STTP on Green Communication · <span>BMSIT&amp;M, Bengaluru</span></div></div></li>
+<li class="event"><div class="event-date">14 Aug 2021</div>
+  <div><div class="event-title">Understanding the Concepts of 4G/5G Systems using Smartphone and CRFO: A Hands-on Training</div><div class="event-meta">Value Added Course on Latest Trends in 5G and Applications · <span>HKBK College of Engineering, Bengaluru</span></div></div></li>
+<li class="event"><div class="event-date">11 Jul 2021</div>
+  <div><div class="event-title">Hands-on Training on Deep Learning-based Channel Estimation and Signal Detection in OFDM Systems</div><div class="event-meta">Online STTP on IoT — 5G and Beyond with Deep Learning · <span>Mahindra University, Hyderabad</span></div></div></li>
+<li class="event"><div class="event-date">09 Jul 2021</div>
+  <div><div class="event-title">Understanding the Concepts of 4G/5G Systems using Smartphone and CRFO</div><div class="event-meta">Online STTP on IoT — 5G and Beyond with Deep Learning · <span>Mahindra University, Hyderabad</span></div></div></li>
+<li class="event"><div class="event-date">08 Jul 2021</div>
+  <div><div class="event-title">Hands-on Training on Deep Learning based RF Signal Classification for Dynamic Spectrum Access Applications</div><div class="event-meta">Online STTP on IoT — 5G and Beyond with Deep Learning · <span>Mahindra University, Hyderabad</span></div></div></li>
+<li class="event"><div class="event-date">29 Apr 2021</div>
+  <div><div class="event-title">Hands-On Training on 4G/5G Mobile Radio Propagation (Pathloss, Shadow Fading and Small Scale Fading) through Smartphone and CRFO</div><div class="event-meta">AICTE Online STTP on AI-MIMO: mmWave and Massive MIMO Applications for 5G Wireless Networks using AI · <span>GRIET, Hyderabad</span></div></div></li>
+<li class="event"><div class="event-date">28 Apr 2021</div>
+  <div><div class="event-title">Hands-On Training on Deep Learning based RF Signal Classification (using Kaggle and Python)</div><div class="event-meta">AICTE Online STTP on AI-MIMO: mmWave and Massive MIMO Applications for 5G Wireless Networks using AI · <span>GRIET, Hyderabad</span></div></div></li>
+<li class="event"><div class="event-date">10 Apr 2021</div>
+  <div><div class="event-title">Cellular Ecosystem: 5G and Beyond</div><div class="event-meta">Industrial Lecture · <span>NIT Tiruchirappalli</span></div></div></li>
+<li class="event"><div class="event-date">13 Mar 2021</div>
+  <div><div class="event-title">5G Cellular and Drone Communication Systems</div><div class="event-meta">Guest Lecture · <span>MAM College of Engineering and Technology, Tiruchirappalli</span></div></div></li>
+<li class="event"><div class="event-date">02 Mar 2021</div>
+  <div><div class="event-title">5G and Beyond Wireless Ecosystem</div><div class="event-meta">Guest Lecture · <span>SSN College of Engineering, Chennai</span></div></div></li>
+<li class="event"><div class="event-date">07 Feb 2021</div>
+  <div><div class="event-title">Massive MIMO enabled Communication System Design for Drone Swarms: Case Studies and Future Directions</div><div class="event-meta">TEQIP III Workshop: Disruptive Wireless Communication Paradigms — The Road Towards 6G (DWCP-6G) · <span>IIIT Guwahati</span></div></div></li>
+<li class="event"><div class="event-date">19 Jan 2021</div>
+  <div><div class="event-title">Real-Time 5G Emulation and its Future Perspective</div><div class="event-meta">ATAL Online FDP: 5G — Green Communication &amp; Network Deployment in Smart Cities · <span>Acharya Institute of Technology, Bangalore</span></div></div></li></ul></details>
+<details class="year-group">
+<summary><span class="yg-year">2020</span><span class="yg-count">7 talks</span></summary>
+<ul class="events"><li class="event"><div class="event-date">26 Dec 2020</div>
+  <div><div class="event-title">5-Nines Radio: Realizing Your Own End-to-End 4G/5G Cellular Network</div><div class="event-meta">TEQIP III Short Term Course: 5G and Beyond Wireless Technologies — Modelling and Simulations using MATLAB · <span>IIT Indore</span></div></div></li>
+<li class="event"><div class="event-date">10 Dec 2020</div>
+  <div><div class="event-title">Demonstration of 5-Nines Radio: A 4G/5G Testbed</div><div class="event-meta">ATAL Online FDP: 5G LTE Wireless Communication Systems for NB-IoT · <span>LENDI Institute of Engineering and Technology, Vizianagaram</span></div></div></li>
+<li class="event"><div class="event-date">10 Dec 2020</div>
+  <div><div class="event-title">Introduction to 5G New Radio</div><div class="event-meta">ATAL Online FDP: 5G LTE Wireless Communication Systems for NB-IoT · <span>LENDI Institute of Engineering and Technology, Vizianagaram</span></div></div></li>
+<li class="event"><div class="event-date">07 Dec 2020</div>
+  <div><div class="event-title">Overview of 5G Access and Core Networks</div><div class="event-meta">AICTE National Level STTP: Energy Efficient Techniques for 5G Wireless Communications · <span>PICT, Pune</span></div></div></li>
+<li class="event"><div class="event-date">27 Nov 2020</div>
+  <div><div class="event-title">Demonstration of 5G Waveforms and Channel Coding using Deep Radio</div><div class="event-meta">ATAL Online FDP: Towards 5G Communications &amp; Beyond with IoT, Machine Learning · <span>Goa College of Engineering, Goa</span></div></div></li>
+<li class="event"><div class="event-date">24 Nov 2020</div>
+  <div><div class="event-title">Demonstration of 5-Nines Radio: A 4G/5G Testbed</div><div class="event-meta">ATAL Online FDP: Towards 5G Communications &amp; Beyond with IoT, Machine Learning · <span>Goa College of Engineering, Goa</span></div></div></li>
+<li class="event"><div class="event-date">23 Nov 2020</div>
+  <div><div class="event-title">Introduction to 5G Access Network</div><div class="event-meta">ATAL Online FDP: Towards 5G Communications &amp; Beyond with IoT, Machine Learning · <span>Goa College of Engineering, Goa</span></div></div></li></ul></details>
+<details class="year-group">
+<summary><span class="yg-year">2019</span><span class="yg-count">5 talks</span></summary>
+<ul class="events"><li class="event"><div class="event-date">10 Dec 2019</div>
+  <div><div class="event-title">5G and Beyond</div><div class="event-meta">Short Term Training Program on 5G Mobile Communication Networks · <span>BIT Mesra, Ranchi</span></div></div></li>
+<li class="event"><div class="event-date">15 Nov 2019</div>
+  <div><div class="event-title">5G and Beyond</div><div class="event-meta">Guest Lecture · <span>NIT Tiruchirappalli</span></div></div></li>
+<li class="event"><div class="event-date">Aug 2019</div>
+  <div><div class="event-title">Wi-Guy: WIreless GUide for You</div><div class="event-meta">Product Demo · <span>Malineni Perumallu Educational Society&#x27;s Group of Institutions, Guntur</span></div></div></li>
+<li class="event"><div class="event-date">Aug 2019</div>
+  <div><div class="event-title">Wi-Guy: WIreless GUide for You</div><div class="event-meta">Product Demo · <span>St. Ann&#x27;s College of Engineering and Technology, Andhra Pradesh</span></div></div></li>
+<li class="event"><div class="event-date">Aug 2019</div>
+  <div><div class="event-title">Wi-Guy: WIreless GUide for You</div><div class="event-meta">Product Demo · <span>Vasireddy Venkatadri Institute of Technology, Guntur</span></div></div></li></ul></details>
+<details class="year-group">
+<summary><span class="yg-year">2017</span><span class="yg-count">1 talk</span></summary>
+<ul class="events"><li class="event"><div class="event-date">28 Jun 2017</div>
+  <div><div class="event-title">Massive MIMO for Drone Communications</div><div class="event-meta">Sino-Swedish Workshop on Techniques for 5G Communications · <span>Linköping University, Sweden</span></div></div></li></ul></details>
+</section>
+
+<section id="workshops">
+  <h2>Tutorials</h2>
+  <ul class="events"><li class="event"><div class="event-date">03 Jan 2023</div>
+  <div><div class="event-title">Deep Learning based Radio Frequency Signal Classification: Hands-On</div><div class="event-meta">COMSNETS 2023 · <span>Bengaluru, Karnataka</span></div></div></li>
+<li class="event"><div class="event-date">25 Aug 2022</div>
+  <div><div class="event-title">Application of Deep Learning in 5G and Beyond Communications: Hands-On</div><div class="event-meta">ICETCI 2022 · <span>Mahindra University, Hyderabad</span></div></div></li></ul>
+  <h2 style="margin-top:32px">Workshops</h2>
+  <ul class="events"><li class="event"><div class="event-date">19–20 Feb 2026</div>
+  <div><div class="event-title">End-to-End 5G: Hands-On</div><div class="event-meta">IEEE Antennas and Propagation Society Boot Camp · <span>Sri Sairam Engineering College, Chennai</span></div></div></li>
+<li class="event"><div class="event-date">28 Jan 2026</div>
+  <div><div class="event-title">Workshop on 5G Technology &amp; Live Testbed Experience</div><div class="event-meta">Workshop · <span>Mahindra University, Hyderabad</span></div></div></li>
+<li class="event"><div class="event-date">12 Apr 2025</div>
+  <div><div class="event-title">End-to-End 5G: Demonstration</div><div class="event-meta">Workshop · <span>Kongu Engineering College, Erode</span></div></div></li>
+<li class="event"><div class="event-date">06–07 Jan 2025</div>
+  <div><div class="event-title">Hands-On with SDRs for Advanced Wireless Technologies</div><div class="event-meta">Workshop · <span>Kongu Engineering College, Erode</span></div></div></li>
+<li class="event"><div class="event-date">01 Oct 2024</div>
+  <div><div class="event-title">Sustainable IoT Use Cases with 5G</div><div class="event-meta">Workshop · <span>Vellore Institute of Technology, Vellore</span></div></div></li>
+<li class="event"><div class="event-date">13–14 Mar 2021</div>
+  <div><div class="event-title">Wireless Communications: 5G and Beyond</div><div class="event-meta">Probe 2021 — Annual ECE Symposium of NIT Trichy · <span>National Institute of Technology Tiruchirappalli</span></div></div></li>
+<li class="event"><div class="event-date">27 Nov 2020</div>
+  <div><div class="event-title">Wireless Communications: 5G and Beyond</div><div class="event-meta">ATAL Online FDP: Towards 5G Communications &amp; Beyond with IoT, Machine Learning · <span>Goa College of Engineering, Goa</span></div></div></li></ul>
+</section>
+
+<section id="service">
+  <h2>Professional Activities</h2>
+  <ul class="plain">
+    <li><b>Member:</b> IEEE, IEEE Signal Processing Society</li>
+    <li><b>TPC Member:</b> IEEE Globecom 2017, IEEE VTC Fall 2018</li>
+    <li><b>Session Chair:</b> ICUAS 2016</li>
+    <li><b>Reviewer (journals):</b> IEEE Transactions on Wireless Communications, IEEE Transactions on Communications, IEEE Transactions on Vehicular Technology, IEEE Transactions on Mobile Computing, IEEE Wireless Communications Letters, IEEE Communications Letters, IEEE Wireless Communications Magazine, IEEE Access, IET Communications, Elsevier Aerospace Science and Technology, Vehicular Communications, Sensors</li>
+    <li><b>Reviewer (conferences):</b> IEEE ICC, IEEE Globecom, IEEE WCNC, IEEE VTC, NCC</li>
+  </ul>
+</section>
+
+<section id="teaching">
+  <h2>Teaching</h2>
+  <ul class="plain"><li>Teaching Assistant, <i>Modern Channel Coding, Inference and Learning</i>, Linköping University, Sweden (2016 &amp; 2017)</li></ul>
+</section>
+
+<footer>
+  <a href="https://basigwireless.com/" target="_blank" rel="noopener">BaSig Wireless</a>
+  <a href="https://github.com/basigwireless?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+  <a href="https://www.youtube.com/@BaSigWireless/videos" target="_blank" rel="noopener">YouTube</a>
+  <a href="https://www.instagram.com/basigwireless/" target="_blank" rel="noopener">Instagram</a>
+</footer>
+
+</div>
+</body>
+</html>
